@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@drawable/ic_mail_outline_black_48dp"
+        android:id="@+id/email_test_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/email_test_text"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_email_success"/>
+    </LinearLayout>
+   <TextView
+       android:layout_centerHorizontal="true"
+       android:background="@color/babyblue"
+       android:id="@+id/email_test_clock"
+       android:textSize="20sp"
+       android:textColor="@android:color/white"
+       android:layout_alignParentTop="true"
+       android:layout_width="match_parent"
+       android:layout_height="40dp" />
+    <Button
+        android:textSize="22sp"
+        android:layout_marginBottom="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_welcome_cm"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_bg"
+        android:id="@+id/btn_welcome_cm"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

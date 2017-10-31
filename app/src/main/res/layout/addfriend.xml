@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/add_linear"
+    android:layout_height="match_parent">
+    <android.support.design.widget.TextInputLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:textSize="20sp"
+            android:id="@+id/add_friendName"
+            android:hint="@string/cmaz_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btn_add_friend"
+        android:enabled="false"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="@string/add"
+        android:background="@drawable/btn_bg"
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

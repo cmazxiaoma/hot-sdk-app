@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.administrator.cmazxiaoma">
+    <!--腾讯bugly需要的权限-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--Bmob需要的权限-->
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!--允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!--短信-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <!--发送短信-->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!--系统窗口权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--摄像头-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--录音-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--通知震动-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        tools:replace="android:label"
+        android:name=".application.BaseApplication"
+        android:allowBackup="true"
+        android:label="@string/login_app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"><!--不要设置错了-->
+
+        <!--没有actionBar,且全屏显示-->
+        <!--程序首先载入闪屏页-->
+        <activity android:name=".ui.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <!--设置页-->
+        <activity android:name=".ui.SettingActivity" android:label="@string/setting"/>
+        <!--主页-->
+        <activity android:name=".MainActivity"  android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!--activity基类-->
+        <activity android:name=".ui.BaseActivity" android:theme="@style/AppTheme"/>
+
+        <!--引导页-->
+        <activity android:name=".ui.GuideActivity" android:theme="@style/GuideTheme" />
+
+        <!--登录页-->
+        <activity android:name=".ui.LoginActivity" android:theme="@style/Login_Resgiter_Theme" android:windowSoftInputMode="adjustResize"/>
+        <!--注册页-->
+        <activity android:name=".ui.RegisterActivity" android:theme="@style/Login_Resgiter_Theme" android:windowSoftInputMode="adjustResize"/>
+        <!--邮箱验证页-->
+        <activity android:name=".ui.EmailTestActivity" android:label="@string/email_test"/>
+        <!--账号与安全页-->
+        <activity android:name=".ui.UserSafeActivity" android:label="@string/user_safety"/>
+        <!--修改密码页-->
+        <activity android:name=".ui.EditPasswordActivity" android:label="@string/edit_password" android:windowSoftInputMode="adjustResize"/>
+        <!--重置密码页-->
+        <activity android:name=".ui.ResetPasswordActivity" android:label="@string/forget_password_reset"/>
+       <!--快递查询页-->
+        <activity android:name=".ui.QueryDeliveryActivity" android:label="@string/query_delivery"/>
+        <!--手机号查询页-->
+        <activity android:name=".ui.QueryPhoneActivity" android:label="@string/query_phone_land"/>
+        <!--微信精选文章-->
+        <activity android:name=".ui.WechatNewDetailActivity"/>
+        <!--美女图片详情页-->
+        <activity android:name=".ui.GirlPhotoActivity"/>
+        <!--SmsService-->
+        <service android:name=".service.SmsService"/>
+        <!--SmsBroadcastReceiver-->
+        <receiver android:name=".service.SmsService$SmsReceiver"/>
+        <!--更新页-->
+        <activity android:name=".ui.UpdateAppActivity" android:label="@string/updateapp"/>
+        <!--即时聊天首页-->
+        <activity android:name=".ui.ChatActivity" android:configChanges="orientation|screenSize"/> <!--防止横竖屏切换 activity被重建-->
+        <!--查看好友个人信息-->
+        <activity android:name=".ui.FriendDataActivity" android:label="@string/friendData"/>
+        <!--和好友聊天界面-->
+        <activity android:name=".ui.FriendChatActivity"/>
+        <!--添加好友界面-->
+        <activity android:name=".ui.AddFriendActivity" android:label="@string/add_friend"/>
+        <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver" >
+            <intent-filter>
+                <action android:name="cn.bmob.action.RECONNECT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> <!--监听网络连通性-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" /> <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />  <!-- 解锁完成后会调用 -->
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="cn.bmob.newim.core.service.BmobIMService"
+            android:process=":bmobcore" />
+        <service
+            android:name="cn.bmob.newim.core.service.NotifyService"
+            android:process=":bmobcore" />
+        <service android:name="cn.bmob.newim.core.service.ReConnectService" />
+        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="Bmob_APP_KEY"
+            android:value="7e7086247264ba3492bf0a568b8a786a" />
+    </application>
+
+</manifest>

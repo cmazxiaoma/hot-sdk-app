@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_weight="0.6"
+        android:id="@+id/wechat_news_title"
+        android:lines="3"
+        android:textSize="18sp"
+        android:text="小马是最棒的，沉梦昂志"
+        android:textColor="@android:color/black"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content" />
+     <ImageView
+         android:layout_weight="0.4"
+         android:layout_marginStart="10dp"
+         android:id="@+id/wechat_news_img"
+         android:src="@mipmap/ic_launcher"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wechat_news_source"
+            android:text="任命李伯"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+</LinearLayout>

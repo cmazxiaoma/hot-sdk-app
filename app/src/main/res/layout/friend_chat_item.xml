@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--日期-->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:text="2017-3-11 23:03"
+            android:textColor="@android:color/white"
+            android:background="@color/babyblue"
+            android:id="@+id/friend_chat_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!--左边的-->
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:id="@+id/friend_chat_leftlayout"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/friend_chat_friendName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friend_chat__friendHead"
+            android:src="@drawable/photoload"
+            android:layout_marginStart="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:maxWidth="260dp"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:background="@drawable/chat_bg_cloud"
+            android:id="@+id/friend_chat_left_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--右边-->
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:gravity="right"
+        android:id="@+id/friend_chat_rightLayout"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:maxWidth="280dp"
+            android:background="@drawable/chat_bg_user"
+            android:layout_marginStart="10dp"
+            android:textIsSelectable="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="18sp"
+            android:padding="20dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/friend_chat_right_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="10dp"
+            android:src="@drawable/photoload"
+            android:id="@+id/friend_chat_myUserHead"
+            android:layout_marginEnd="10dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+    </LinearLayout>
+
+</RelativeLayout>

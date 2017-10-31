@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:divider="@drawable/divider"
+    android:showDividers="middle|end"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--单聊-->
+    <LinearLayout
+        android:id="@+id/single_chat"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--头像-->
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/conversation_friendHead"
+            android:src="@drawable/photoload"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!--朋友的用户名-->
+                <TextView
+                    android:id="@+id/conversation_friendUsername"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:text="小猫"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginStart="100dp"
+                    android:id="@+id/conversation_last_date"
+                    android:textSize="15sp"
+                    android:text="日期"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:ellipsize="end"
+                android:maxEms="20"
+                android:singleLine="true"
+                android:text="我不怕千万人阻挡,只怕自己投降"
+                android:id="@+id/conversation_last_msg"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/darkgray"
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"/>
+</LinearLayout>

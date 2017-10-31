@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:paddingStart="20dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<TextView
+    android:layout_marginTop="15dp"
+    android:textColor="@android:color/black"
+    android:textSize="18sp"
+    android:text="@string/exit_login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:text="@string/exit_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+      <Button
+            android:id="@+id/dialog_exit_negativeButton"
+            android:layout_marginLeft="60dp"
+            android:textSize="14sp"
+            android:text="@string/negativeButton"
+            android:textColor="@color/colorPrimary"
+            android:background="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/dialog_exit_positionButton"
+            android:textSize="14sp"
+            android:text="@string/positiveButton"
+            android:textColor="@color/colorPrimary"
+            android:background="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
